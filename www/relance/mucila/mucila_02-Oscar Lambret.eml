@@ -1,0 +1,977 @@
+Subject: mucila -  02-Oscar Lambret _ Etat de la base 
+From: anthony.mangin@gustaveroussy.fr
+To: a-barberio@o-lambret.fr;m-rybczynski@o-lambret.fr;m-brasseur@o-lambret.fr;m-tabutaud@o-lambret.fr;a-niss@o-lambret.fr;
+Cc:jeremy.mione@gustaveroussy.fr;jeanne.gay@gustaveroussy.fr;
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relance pour l'étude clinique en oncologie</title>
+    
+</head>
+<body style="font-size: 16px; background-color: #e6f2ff; text-align: center;">
+    <div style="text-align: center; max-width: 1500px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1>Etat des lieux de la base <span id="study-name">mucila</span></h1>
+        <div id="email-content" style="font-size: 18px; text-align: left;">
+            <p>Bonjour,</p>
+            <p>Ce courriel a pour but de vous accompagner dans la saisie des données. Si vous avez des questions ou des besoins d'assistance, n'hésitez pas à nous contacter.</p>
+            <p><strong style="color:red;">Le statut "No Data" indique qu'une fiche est vide. Cela ne signifie pas qu'elle doit être remplie, mais permet de vérifier s'il manque des informations importantes dans le CRF.</strong></p>
+            <p>Merci pour votre contribution.</p>
+            <p>Bien cordialement,</p>
+            <p>L'équipe de l'étude <span id="study-name-footer">mucila</span></p>
+            <p> N.B. : les lien sur les fiches et sur le numéro de patient ouvre le CRF à l'endroit voulu.</p>
+            <p> N.B.2 : les fiches ayant des problèmes signalés (Resist,recherche translationnel) ont été corrigées, et les données effacés sur celle-ci ont été restaurés.</p>
+            <p>   si vous voyez un autre soucis vous pouvez faire une capture d'écran et me l'envoyer.</p>
+        </div>
+        <table>
+            <tbody><tr>
+                <!-- Premier graphique -->
+                <td width="50%">
+                    <div id="chart-container"><img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Inclusion%22%2C%22Baseline%22%2C%22End%20of%20study%22%2C%22Other%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Complete%22%2C%22data%22%3A%5B21%2C61%2C7%2C21%5D%2C%22backgroundColor%22%3A%22rgba(85%2C%20239%2C%20196%2C%200.8)%22%7D%2C%7B%22label%22%3A%22Incomplete%22%2C%22data%22%3A%5B0%2C12%2C0%2C5%5D%2C%22backgroundColor%22%3A%22rgba(255%2C%20118%2C%20117%2C%200.8)%22%7D%2C%7B%22label%22%3A%22No%20Data%22%2C%22data%22%3A%5B0%2C1%2C0%2C0%5D%2C%22backgroundColor%22%3A%22rgba(128%2C%20128%2C%20128%2C%200.8)%22%7D%5D%7D%2C%22options%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Statut%20des%20fiches%20par%20type%22%7D%2C%22scales%22%3A%7B%22xAxes%22%3A%5B%7B%22stacked%22%3Atrue%7D%5D%2C%22yAxes%22%3A%5B%7B%22stacked%22%3Atrue%7D%5D%7D%7D%7D" alt="Graphique des fiches" style="max-width: 100%;"></div>
+                </td>
+    
+                <!-- Deuxième graphique -->
+                <td width="50%">
+                    <div id="chart-container2"><img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%222022T01%22%2C%222022T02%22%2C%222022T03%22%2C%222022T04%22%2C%222023T01%22%2C%222023T02%22%2C%222023T03%22%2C%222023T04%22%2C%222024T01%22%2C%222024T02%22%2C%222024T03%22%2C%222024T04%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Incomplete%22%2C%22data%22%3A%5B5%2C3%2C0%2C0%2C3%2C0%2C0%2C0%2C0%2C0%2C0%2C0%5D%2C%22backgroundColor%22%3A%22rgba(255%2C%2099%2C%20132%2C%200.8)%22%7D%2C%7B%22label%22%3A%22Complete%22%2C%22data%22%3A%5B23%2C15%2C0%2C0%2C14%2C1%2C0%2C0%2C0%2C0%2C0%2C0%5D%2C%22backgroundColor%22%3A%22rgba(85%2C%20239%2C%20196%2C%200.8)%22%7D%5D%7D%2C%22options%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Historique%20de%20saisie%20des%20fiches%2C%20par%20statut%20et%20par%20trimestre%22%7D%2C%22scales%22%3A%7B%22xAxes%22%3A%5B%7B%22stacked%22%3Atrue%7D%5D%2C%22yAxes%22%3A%5B%7B%22stacked%22%3Atrue%7D%5D%7D%7D%7D" alt="Graphique des fiches" style="max-width: 100%;"></div>
+                </td>
+            </tr>
+        </tbody></table>
+        <div id="statusChart"></div>
+        
+<br><br><br>
+
+        <div> <p> légende pour le statut des fiches patients :</p>  
+            <table style="width: 40%; border-collapse: collapse; margin: 0 auto; border: none;">
+                <tbody><tr>
+                    <td style="width: 30px; height: 30px; background-color: #55efc4; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: none; line-height: 30px;">C</td>
+                    <td style="height: 30px;"><p style="margin: 0; line-height: 30px;">Complete with queries</p></td> 
+                    <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: none; line-height: 30px;">I</td>
+                    <td style="height: 30px;"><p style="margin: 0; line-height: 30px;">Incomplete</p></td>
+                    <td style="width: 30px; height: 30px; background-color: #808080; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: none; line-height: 30px;">N</td>
+                    <td style="height: 30px;"><p style="margin: 0; line-height: 30px;">No Data</p></td>
+                </tr>
+            </tbody></table>
+            
+        <div id="patients-info">
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d4808%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">005-C-A</a></h2><p id="last-entry">Dernières Nouvelles saisies : 12/12/2019 - 4 année(s) 9 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">20/11/2019</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">02/12/2019</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">12/12/2019</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">12/12/2019</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 02/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f4887%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">02/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 02/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f4890%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F13 - Mucositis evaluation</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">02/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Other</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V3- Final visit - 12/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f4893%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F15 - Analgesia consumption</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">12/12/2019</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">33   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d14594%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">019-D-L</a></h2><p id="last-entry">Dernières Nouvelles saisies : 02/11/2020 - 3 année(s) 11 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">09/10/2020</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">22/10/2020</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">02/11/2020</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">02/11/2020</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 22/10/2020</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f14673%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">22/10/2020</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 22/10/2020</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f14676%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F13 - Mucositis evaluation</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">22/10/2020</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d23004%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">031-S-T</a></h2><p id="last-entry">Dernières Nouvelles saisies : 19/04/2023 - 1 année(s) 5 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">26/02/2021</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">26/02/2021</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">19/04/2023</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V1 - Baseline assessment - 26/02/2021</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f23081%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F09 - Clinical Examination</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">26/02/2021</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #55efc4; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">C</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f23033%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">Visit</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">-</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d37564%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">048-A-M</a></h2><p id="last-entry">Dernières Nouvelles saisies : 19/01/2022 - 2 année(s) 8 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">28/12/2021</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">09/01/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">19/01/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">19/01/2022</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 09/01/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f37643%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">09/01/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Other</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V3- Final visit - 19/01/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f37649%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F15 - Analgesia consumption</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">19/01/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">26   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d38234%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">049-L-A</a></h2><p id="last-entry">Dernières Nouvelles saisies : 24/02/2022 - 2 année(s) 7 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">17/01/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">01/02/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">24/02/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">24/02/2022</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 01/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f38313%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">01/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 01/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f38316%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F13 - Mucositis evaluation</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">01/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Other</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V3- Final visit - 24/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f38319%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F15 - Analgesia consumption</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">24/02/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">19   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d50310%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">065-F-L</a></h2><p id="last-entry">Dernières Nouvelles saisies : 20/06/2022 - 2 année(s) 3 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">23/05/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/06/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">20/06/2022</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">20/06/2022</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 06/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f50389%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 06/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f50392%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F13 - Mucositis evaluation</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Other</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V3- Final visit - 20/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f50395%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F15 - Analgesia consumption</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">20/06/2022</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">29   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br>
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fPatientListView%2fSelectPatient%3funiqueReportingGridId%3d17000000%26id%3d68623%26ngrd%3d1" target="_blank" style="color: #007bff; text-decoration: none;">091-B-N</a></h2><p id="last-entry">Dernières Nouvelles saisies : 06/03/2023 - 1 année(s) 7 mois </p><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tbody><tr><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">statut</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Inclusion</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Baseline</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">End of study</th><th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Other</th></tr>
+        <tr><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">End of study</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">13/02/2023</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">28/02/2023</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/03/2023</td><td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/03/2023</td></tr>
+    </tbody></table>
+    <h3>Tableau du patient</h3><table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tbody><tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f68702%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F10 - Hematology tests</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">2   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f68704%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F12 - Laser session</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+            <tbody><tr>
+                <td style="width: 30px; height: 30px; background-color: #808080; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">N</td>
+            </tr>
+        </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">0   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Baseline</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V2 - Assessment visit - 28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f68705%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F13 - Mucositis evaluation</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">28/02/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">1   </td>
+
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">Other</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">V3- Final visit - 06/03/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="https://ecrftm50.gustaveroussy.fr/50036/TrialMaster/Account/Login?returnUrl=%2f50036%2fTrialMaster%2fForm%2fIcrf%2f68708%3freturnUrl%3d%252f50036%252fTrialMaster%252fReportsAdvanced%252fGetReport%253ft%253d51" target="_blank" style="color: #007bff; text-decoration: none;">F15 - Analgesia consumption</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">06/03/2023</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tbody><tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </tbody></table></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">24   </td>
+
+                        </tr></tbody></table></div><br><br><br><br><br><br><br><br></div>
+    </div>
+
+
+    <script>
+/* partie chargement des données */
+
+// Fonction pour récupérer les paramètres de l'URL
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        etude: params.get('etude'),
+        centre: params.get('centre')
+    };
+}
+
+// Extraction des paramètres d'étude et de centre
+const { etude, centre } = getQueryParams();
+
+// Fonction pour récupérer les données de QueryByForm
+const queryByForm = async () => {
+    const response = await fetch(`download/${etude}/QueryByForm.json`);
+    return await response.json();
+};
+
+// Fonction pour filtrer les données de QueryByForm selon le centre
+const filteredQueryByForm = async () => {
+    const entries = await queryByForm();
+    
+    // Si le centre est défini et différent de "ALL", on filtre sur le centre et iCRF_link
+    // Si le centre est "ALL", on filtre uniquement sur iCRF_link
+    return centre === "ALL"
+        ? entries.filter(entry => entry.iCRF_link && entry.iCRF_link !== "F17 - Review")
+        : entries.filter(entry => entry.Site == centre && entry.iCRF_link && entry.iCRF_link !== "F17 - Review");
+};
+
+const filteredQueryByForm_request = async () => {
+    const entries = await queryByForm();
+    
+    // Si le centre est défini et différent de "ALL", on filtre sur le centre et iCRF_link
+    // Si le centre est "ALL", on filtre uniquement sur iCRF_link
+    return centre === "ALL"
+        ? entries.filter(entry => entry.iCRF_link && entry.iCRF_link !== "F17 - Review"
+        && !(entry["Open Queries/Discrepancies"] == "0" && (entry["iCRF Status"] == "Complete" || entry["iCRF Status"] == "Monitored" || entry["iCRF Status"] ==  "Signed" || entry["iCRF Status"] == "Partial Monitored")))
+        : entries.filter(entry => entry.Site == centre && entry.iCRF_link && entry.iCRF_link !== "F17 - Review"
+
+        && !(entry["Open Queries/Discrepancies"] == "0" && (entry["iCRF Status"] == "Complete" || entry["iCRF Status"] == "Monitored" || entry["iCRF Status"] ==  "Signed" || entry["iCRF Status"] == "Partial Monitored")))
+
+        ;
+};
+
+// Fonction pour trier les données filtrées par TypeOfForm
+const sortedByTypeOfForm = async () => {
+    const filteredEntries = await filteredQueryByForm_request();
+    return filteredEntries.sort((a, b) => {
+        if (a.TypeOfForm < b.TypeOfForm) {
+            return -1; // a vient avant b
+        } else if (a.TypeOfForm > b.TypeOfForm) {
+            return 1; // a vient après b
+        }
+        return 0; // a et b sont égaux
+    });
+};
+
+// Fonction pour récupérer la liste des patients
+const patientList = async () => {
+    const response = await fetch(`download/${etude}/patientList.json`);
+    return await response.json();
+};
+
+// Fonction pour filtrer la liste des patients en fonction du centre
+const filteredPatientList = async () => {
+    const entries = await patientList();
+    // Si centre est "ALL", on ne filtre pas, sinon on filtre par "Site Caption"
+    return centre === "ALL" 
+        ? entries 
+        : entries.filter(entry => entry["Site Caption"] == centre);
+};
+
+// Utilisation des fonctions
+// (async () => {
+//     const sortedForms = await sortedByTypeOfForm();
+//    // console.log('Sorted Forms:', sortedForms);
+
+//     const filteredPatients = await filteredPatientList();
+//  //   console.log('Filtered Patients:', filteredPatients);
+// })();
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // Récupération des données filtrées
+        const ficheStats = await countFiches(await filteredQueryByForm());
+        const chartUrl = generateChartUrl(ficheStats);
+
+        // Affichage du graphique
+        document.getElementById('chart-container').innerHTML = `<img src="${chartUrl}" alt="Graphique des fiches" style="max-width: 100%;">`;
+
+        // Affichage des données
+        const patients = await filteredPatientList();
+        console.log('Patients:', patients); // Log des patients avant d'afficher les données
+        displayData(await sortedByTypeOfForm(), patients);
+    } catch (error) {
+        console.error('Une erreur s\'est produite:', error);
+    }
+});
+
+
+        async function fetchJSON(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ! statut : ${response.status}`);
+            }
+            return await response.json();
+        }
+        function countFiches(data) {
+    let validFiches = {};
+    let inProgressFiches = {};
+    let nodataFiches = {};
+    let allTypes = new Set(); // Créer un ensemble pour stocker tous les types de formulaires
+   //console.log(`${data.length} fiche retrouvé`)
+    data.forEach(entry => {
+        const typeOfForm = entry.TypeOfForm; // Récupérer le type de formulaire
+        allTypes.add(typeOfForm); // Ajouter le type de formulaire à l'ensemble
+       // console.log(typeOfForm); // Debug : vérifier le type de formulaire
+
+        // Compter les fiches valides
+        if 
+            (entry["iCRF Status"] === "Complete" || 
+             entry["iCRF Status"] === "Monitored" || 
+             entry["iCRF Status"] === "Signed" || 
+             entry["iCRF Status"] === "Partial Monitored") {
+            // Si le type de formulaire est déjà présent dans validFiches, augmenter le compteur
+            validFiches[typeOfForm] = (validFiches[typeOfForm] || 0) + 1;
+        } 
+        // Compter les fiches en cours de saisie
+        else if( entry["iCRF Status"]=="Incomplete") {           // Si le type de formulaire est déjà présent dans inProgressFiches, augmenter le compteur
+            inProgressFiches[typeOfForm] = (inProgressFiches[typeOfForm] || 0) + 1;
+        }
+        else  nodataFiches[typeOfForm] = (nodataFiches[typeOfForm] || 0) + 1;
+    });
+
+    // S'assurer que tous les types de formulaires sont présents dans les deux objets
+    allTypes.forEach(type => {
+        if (!(type in validFiches)) validFiches[type] = 0;
+        if (!(type in inProgressFiches)) inProgressFiches[type] = 0;
+        if (!(type in nodataFiches)) nodataFiches[type] = 0;
+    });
+// console.log(validFiches, inProgressFiches)
+    // Retourner le nombre total de fiches par type de formulaire
+    return { validFiches, inProgressFiches,nodataFiches };
+}
+function generateChartUrl({ validFiches, inProgressFiches,nodataFiches }) {
+    // Ordre personnalisé des types de formulaires
+    const predefinedOrder = [
+        'statut','Inclusion', 'Baseline', 'Treatment', 'Evaluation', 'AE', 'Recist', 
+        'Progression', 'Follow-up', 'Death', 'End of study', 'Other'
+    ];
+
+    // Obtenir tous les labels
+    const labels = Object.keys(validFiches);
+
+    // Trier les labels selon l'ordre prédéfini
+    labels.sort((a, b) => {
+        const indexA = predefinedOrder.indexOf(a);
+        const indexB = predefinedOrder.indexOf(b);
+
+        // Si l'un des éléments n'est pas dans predefinedOrder, il sera placé à la fin
+        if (indexA === -1 && indexB === -1) return a.localeCompare(b); // Classement alphabétique pour les types non prédéfinis
+        if (indexA === -1) return 1; // 'a' n'est pas dans predefinedOrder, donc à la fin
+        if (indexB === -1) return -1; // 'b' n'est pas dans predefinedOrder, donc à la fin
+
+        return indexA - indexB; // Comparaison basée sur predefinedOrder
+    });
+
+
+    // Générer les données triées pour les fiches valides et en cours
+    const validCounts = labels.map(label => validFiches[label] || 0);
+    const inProgressCounts = labels.map(label => inProgressFiches[label] || 0);
+    const nodataFichesCounts = labels.map(label => nodataFiches[label] || 0);
+ 
+    // Construire l'URL de QuickChart.io pour générer le graphique
+    const chartConfig = {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+    {
+        label: 'Complete',
+        data: validCounts,
+        backgroundColor: 'rgba(85, 239, 196, 0.8)' // Vert menthe doux
+    },
+    {
+        label: 'Incomplete',
+        data: inProgressCounts,
+        backgroundColor: 'rgba(255, 118, 117, 0.8)' // Rouge corail léger
+    },
+    {
+        label: 'No Data',
+        data: nodataFichesCounts,
+        backgroundColor: 'rgba(128, 128, 128, 0.8)' // Gris doux
+    }
+]
+        },
+        options: {
+            title: {
+                display: true,
+                text: `Statut des fiches par type`
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    };
+
+    // Encodage en URL
+    const chartUrl = `https://quickchart.io/chart?c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
+    return chartUrl;
+}
+
+
+
+
+    function timeSince(date) {
+  const now = new Date();
+  const entryDate = new Date(date);
+  const diffTime = Math.abs(now - entryDate);
+  
+  // Convertir en jours, mois, années
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const diffMonths = Math.floor(diffDays / 30.44); // Approximation pour les mois
+  const diffYears = Math.floor(diffMonths / 12);
+  const remainingMonths = diffMonths % 12; // Calculer les mois restants après les années complètes
+
+  if (diffYears >= 1) {
+    if (remainingMonths > 0) {
+      return `${diffYears} année(s) ${remainingMonths} mois`;
+    } else {
+      return `${diffYears} année(s)`;
+    }
+  } else if (diffMonths >= 1) {
+    return `${diffMonths} mois`;
+  } else {
+    return `${diffDays} jour(s)`;
+  }
+}
+function getMaxDate(patientInfo) {
+    // Exclure les valeurs non datées (comme 'statut')
+    const validDateKeys = Object.keys(patientInfo)
+        .filter(key => key !== 'statut' && patientInfo[key].match(/^\d{2}\/\d{2}\/\d{4}$/)); // Vérifier le format de la date
+    
+    // Convertir les dates valides et trouver la date maximale
+    const dates = validDateKeys.map(key => parseDate(patientInfo[key]));
+    return new Date(Math.max(...dates));
+}
+
+
+
+        function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0'); // Ajouter un zéro si le jour est à un seul chiffre
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Les mois commencent à 0, donc ajouter +1
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+        async function fetchJSON(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ! statut : ${response.status}`);
+            }
+            return await response.json();
+        }
+        function parseDate(dateString) {
+    const [day, month, year] = dateString.split('/').map(Number);
+    return new Date(year, month - 1, day); // Les mois sont basés sur 0 dans l'objet Date
+}
+        function displayData(queryByFom, patientList) {
+            const { etude, centre } = getQueryParams();
+            const studyNameElements = document.querySelectorAll('#study-name, #study-name-footer');
+            studyNameElements.forEach(el => el.textContent = etude); // Remplacez par le nom de l'étude si nécessaire
+
+            let html = '';
+
+            // Champs à ne pas afficher
+            const fieldsToExclude = ["Patient Caption_link","Patient Caption_url", "Form State", "Form State Details", "Deleted", "Status", "Patient Type", "Site Caption"];
+
+            // Affichage des données par patient
+            patientList.forEach(patient => {
+                const patientLink = patient["Patient Caption_link"];
+                const patientUrl = patient["Patient Caption_url"];
+                const patientData = queryByFom.filter(entry => entry.Patient === patientLink);
+
+                // Filtrer les champs à afficher pour le patient
+                const filteredPatientInfo = Object.keys(patient)
+                    .filter(key => !fieldsToExclude.includes(key))
+                    .reduce((obj, key) => {
+                        obj[key] = patient[key];
+                        return obj;
+                    }, {});
+                    // const pat_status = filteredPatientInfo.statut;
+
+
+                const fieldsToOrder = ['statut', 'Inclusion', 'Baseline', 'Treatment', 'AE', 'Recist','Progression', 'End of study', 'Other'];
+
+// Créer une version triée de filteredPatientInfo en respectant l'ordre spécifié dans fieldsToOrder
+const orderedFilteredPatientInfo = Object.keys(filteredPatientInfo)
+    .sort((a, b) => {
+        const indexA = fieldsToOrder.indexOf(a) !== -1 ? fieldsToOrder.indexOf(a) : fieldsToOrder.length;
+        const indexB = fieldsToOrder.indexOf(b) !== -1 ? fieldsToOrder.indexOf(b) : fieldsToOrder.length;
+        return indexA - indexB;
+    })
+    .reduce((obj, key) => {
+        obj[key] = filteredPatientInfo[key];
+        return obj;
+    }, {});
+    const pat_status = filteredPatientInfo.statut;
+                html += `
+                <div style="margin: 0 auto; padding: 20px; border-radius: 10px;">
+                    <h2 style="font-size: 4em;">Informations sur le patient <a href="${patientUrl}" target="_blank" style="color: #007bff; text-decoration: none;">${patientLink}</a></h2>`;
+
+
+                const maxDate = getMaxDate(orderedFilteredPatientInfo);
+                        const elapsedTime = timeSince(maxDate);
+                        html += `<p id="last-entry">Dernières Nouvelles saisies : ${formatDate(maxDate)} - ${elapsedTime} </p>`
+
+
+
+                        html += `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+        <tr>${Object.keys(orderedFilteredPatientInfo).map(field => {
+            let displayField = field;
+            if (['Treatment','AE', 'Recist', 'Follow-up'].includes(field)) {
+                displayField = `Last ${field}`;
+            }
+            return `<th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">${displayField}</th>`;
+        }).join('')}</tr>
+        <tr>${Object.values(orderedFilteredPatientInfo).map(value => `<td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${value || 'N/A'}</td>`).join('')}</tr>
+    </table>
+    <h3>Tableau du patient</h3>`;
+
+                if (patientData.length === 0) {
+                    html += '<p>Nombre de fiches "No Data" ou "Incomplete" : 0</p>';
+                } else {
+                    html += `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+                        <tr>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Type de fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Visite</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Date associée</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Statut de la fiche</th>
+                            <th style="padding: 15px; border: 1px solid #ccc; text-align: center; background-color: #f2f2f2;">Requète(s) sur la page</th>
+                        </tr>`;
+
+                       
+
+// Mettre à jour le texte dans la page HTML
+                    patientData.forEach(entry => {
+                        // Remplacer la date "unknown" par "-"
+                        const date = entry.date === "unknown" ? "-" : entry.date;
+
+                        // Remplacer le texte de statut par les carrés colorés
+                        let statusHtml = '';
+                        switch (entry["iCRF Status"]) {
+                            case 'Complete':
+                                statusHtml = `<table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="width: 30px; height: 30px; background-color: #55efc4; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">C</td>
+                                    </tr>
+                                </table>`;
+                                break;
+                            case 'Incomplete':
+                                statusHtml = `<table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="width: 30px; height: 30px; background-color: #FF7675; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">I</td>
+                                    </tr>
+                                </table>`;
+                                break;
+                            case 'No Data':
+        
+                             statusHtml = `<table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+            <tr>
+                <td style="width: 30px; height: 30px; background-color: #808080; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">N</td>
+            </tr>
+        </table>`;
+        //  if (['Baseline', 'Inclusion'].includes(entry.TypeOfForm))  statusHtml = `<table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+        //     <tr>
+        //         <td style="width: 30px; height: 30px; background-color: rgba(190, 179, 179, 0.8); color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">DUE</td>
+        //     </tr>
+        // </table>`;
+        break;
+                            default:
+                            statusHtml = `<table style="width: 30px; height: 30px; border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="width: 30px; height: 30px; background-color: #55efc4; color: white; text-align: center; vertical-align: middle; font-weight: bold; border: 1px solid #ccc;">C</td>
+                                    </tr>
+                                </table>`;
+                                break;
+                        }
+                        
+                        html += `
+                        <tr>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${entry.TypeOfForm}</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${entry.Visit}</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;"><a href="${entry.iCRF_url}" target="_blank" style="color: #007bff; text-decoration: none;">${entry.iCRF_link}</a></td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${date}</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${statusHtml}</td>
+                            <td style="padding: 15px; border: 1px solid #ccc; text-align: center;">${entry["Open Queries/Discrepancies"]}  ${entry["QueriesDM_MON"] > 0 ? `(${entry["QueriesDM_MON"]} posée(s) par DM/Monito)` : ''} </td>
+
+                        </tr>`;
+                    });
+
+                    html += '</table>';
+                }
+
+                html += '</div><br><br><br><br><br><br><br><br>';
+                document.getElementById('patients-info').innerHTML = html;
+            });
+
+     
+        }
+    </script>
+      <script>
+        async function fetchData(etude, centre) {
+            const response = await fetch(`download/${etude}/QueryByForm.json`);
+            const queryByFom = await response.json();
+
+            const filteredQueryByFom = queryByFom.filter(entry => 
+                entry["date"] && entry["iCRF Status"] !== "No Data" && entry.Site === centre
+            );
+
+            const datesAndStatus = filteredQueryByFom.map(entry => {
+                const dateStr = entry["date"];
+                const [day, month, year] = dateStr.split('/').map(Number);
+                const date = new Date(year, month - 1, day);
+                const status = entry["iCRF Status"]; // Récupérer le statut
+                return { date, status }; // Retourner la date et le statut
+            });
+
+            // Trier les dates par ordre chronologique
+            datesAndStatus.sort((a, b) => a.date - b.date);
+
+            // Filtrer les dates selon les critères
+            const currentDate = new Date();
+            const twoYearsAgo = new Date(currentDate);
+            twoYearsAgo.setFullYear(currentDate.getFullYear() - 3);
+
+            // Garder seulement les dates valides
+            return datesAndStatus.filter(entry => entry.date <= currentDate && entry.date >= twoYearsAgo);
+        }
+
+        function countByTrimester(datesAndStatus) {
+            const currentYear = new Date().getFullYear();
+            const incompleteCounts = {}; // Comptes des fiches "Incomplete"
+            const completeCounts = {}; // Comptes des autres fiches
+
+            // Comptage des fiches par trimestre
+            datesAndStatus.forEach(entry => {
+                const year = entry.date.getFullYear();
+                const quarter = Math.ceil((entry.date.getMonth() + 1) / 3);
+                const trimesterLabel = `${year}T${String(quarter).padStart(2, '0')}`;
+
+                // Initialiser les compteurs si nécessaire
+                if (!incompleteCounts[trimesterLabel]) {
+                    incompleteCounts[trimesterLabel] = 0;
+                }
+                if (!completeCounts[trimesterLabel]) {
+                    completeCounts[trimesterLabel] = 0;
+                }
+
+                // Incrémenter selon le statut
+                if (entry.status === 'Incomplete') {
+                    incompleteCounts[trimesterLabel]++;
+                } else {
+                    completeCounts[trimesterLabel]++;
+                }
+            });
+
+            // Génération des labels, des données pour "Incomplete" et "Complete"
+            const labelsCounts = [];
+            for (let i = 0; i < 12; i++) {
+                const year = currentYear - Math.floor(i / 4);
+                const quarter = (i % 4) + 1;
+                const trimesterLabel = `${year}T${String(quarter).padStart(2, '0')}`;
+
+                labelsCounts.push([
+                    trimesterLabel, 
+                    incompleteCounts[trimesterLabel] || 0, 
+                    completeCounts[trimesterLabel] || 0
+                ]); 
+            }
+
+            // Trier par labels
+            labelsCounts.sort((a, b) => a[0].localeCompare(b[0]));
+
+            // Séparer les labels, les counts de "Incomplete" et de "Complete"
+            const labels = labelsCounts.map(item => item[0]);
+            const incompleteData = labelsCounts.map(item => item[1]);
+            const completeData = labelsCounts.map(item => item[2]);
+
+            return { labels, incompleteData, completeData };
+        }
+
+        async function main() {
+            // Récupérer les paramètres de l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const etude = urlParams.get('etude'); // Récupérer l'étude
+            const centre = urlParams.get('centre'); // Récupérer le centre
+
+            const datesAndStatus = await fetchData(etude, centre);
+            const { labels, incompleteData, completeData } = countByTrimester(datesAndStatus);
+
+
+        //     options: {
+        //     title: {
+        //         display: true,
+        //         text: `Statut des fiches par type`
+        //     },
+        //     scales: {
+        //         xAxes: [{
+        //             stacked: true
+        //         }],
+        //         yAxes: [{
+        //             stacked: true
+        //         }]
+        //     }
+        // }
+            // Générer l'URL du graphique
+            const chartConfig = {
+                type: 'bar',
+                data: {
+                    labels: labels, // Utiliser les labels générés
+                    datasets: [
+                        {
+                            label: 'Incomplete',
+                            data: incompleteData, // Utiliser les données "Incomplete"
+                            backgroundColor: 'rgba(255, 99, 132, 0.8)' // Rouge
+                        },
+                        {
+                            label: 'Complete',
+                            data: completeData, // Utiliser les données "Complete"
+                            backgroundColor: 'rgba(85, 239, 196, 0.8)' // Vert
+                        }
+                    ]
+                },
+                options: {
+            title: {
+                display: true,
+                text: `Historique de saisie des fiches, par statut et par trimestre`
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+            };
+
+            // Générer l'URL pour QuickChart
+            const chartUrl = `https://quickchart.io/chart?c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
+            document.getElementById('chart-container2').innerHTML = `<img src="${chartUrl}" alt="Graphique des fiches" style="max-width: 100%;">`;
+        }
+
+        main();
+
+ 
+    </script>
+
+
+</div></body></html>

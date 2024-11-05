@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Études</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   
+</head>
+<body>
+    <header>
+        <h1>Liste des Études</h1>
+        <div class="filter-container">
+            <label for="dm-filter">Filtrer par DM:</label>
+            <select id="dm-filter" class="dropdown">
+                <!-- Les options seront ajoutées dynamiquement -->
+            </select>
+        </div>
+    </header>
+    
+    <table id="study-table" class="study-table">
+        <thead>
+            <tr>
+                <th>Nom de l'Étude</th>
+               
+                <th>Graphique</th>
+                <th></th>>Activité</th>
+                <th>Actualiser les infos</th>
+                <th>actualiser les études -> <button id="trigger-all">Actualiser Tous</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les lignes du tableau seront ajoutées dynamiquement -->
+        </tbody>
+    </table>
+    <script src="scripts/loadDMs.js" defer></script> <!-- chargement de bouttons des études -->
+    <script src="scripts/loadStudies.js" defer></script>   <!-- la conction qui prends le nom du DM et qui vachercher les données, et qui lance le templissage du tableau par étude. -->    
+    <script src="scripts/chart.js" defer></script>  <!-- code du graphique-->    
+    <script src="scripts/updateTable.js" defer></script>
+
+    <script src="scripts/main.js" defer></script>
+<script>
+
+</script>
+</body>
+</html>

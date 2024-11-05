@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique des fiches par trimestre</title>
+</head>
+<body>
+    <h1>Nombre de fiches par trimestre</h1>
+    <div id="chart-container"></div>
+
+    <script>
+        async function fetchData(etude, centre) {
+            const response = await fetch(`./www/download/${etude}/QueryByForm.json`);
+            const queryByFom = await response.json();
+
+            const filteredQueryByFom = queryByFom.filter(entry => 
+                entry["date"] && entry["iCRF Status"] !== "No Data" && entry.Site === centre
+            );
+
+            const datesAndStatus = filteredQueryByFom.map(entry => {
+                const dateStr = entry["date"];
+                const [day, month, year] = dateStr.split('/').map(Number);
+                const date = new Date(year, month - 1, day);
+                const status = entry["iCRF Status"]; // Récupérer le statut
+                return { date, status }; // Retourner la date et le statut
+            });
+
+            // Trier les dates par ordre chronologique
+            datesAndStatus.sort((a, b) => a.date - b.date);
+
+            // Filtrer les dates selon les critères
+            const currentDate = new Date();
+            const twoYearsAgo = new Date(currentDate);
+            twoYearsAgo.setFullYear(currentDate.getFullYear() - 3);
+
+            // Garder seulement les dates valides
+            return datesAndStatus.filter(entry => entry.date <= currentDate && entry.date >= twoYearsAgo);
+        }
+
+        function countByTrimester(datesAndStatus) {
+            const currentYear = new Date().getFullYear();
+            const incompleteCounts = {}; // Comptes des fiches "Incomplete"
+            const completeCounts = {}; // Comptes des autres fiches
+
+            // Comptage des fiches par trimestre
+            datesAndStatus.forEach(entry => {
+                const year = entry.date.getFullYear();
+                const quarter = Math.ceil((entry.date.getMonth() + 1) / 3);
+                const trimesterLabel = `${year}T${String(quarter).padStart(2, '0')}`;
+
+                // Initialiser les compteurs si nécessaire
+                if (!incompleteCounts[trimesterLabel]) {
+                    incompleteCounts[trimesterLabel] = 0;
+                }
+                if (!completeCounts[trimesterLabel]) {
+                    completeCounts[trimesterLabel] = 0;
+                }
+
+                // Incrémenter selon le statut
+                if (entry.status === 'Incomplete') {
+                    incompleteCounts[trimesterLabel]++;
+                } else {
+                    completeCounts[trimesterLabel]++;
+                }
+            });
+
+            // Génération des labels, des données pour "Incomplete" et "Complete"
+            const labelsCounts = [];
+            for (let i = 0; i < 12; i++) {
+                const year = currentYear - Math.floor(i / 4);
+                const quarter = (i % 4) + 1;
+                const trimesterLabel = `${year}T${String(quarter).padStart(2, '0')}`;
+
+                labelsCounts.push([
+                    trimesterLabel, 
+                    incompleteCounts[trimesterLabel] || 0, 
+                    completeCounts[trimesterLabel] || 0
+                ]); 
+            }
+
+            // Trier par labels
+            labelsCounts.sort((a, b) => a[0].localeCompare(b[0]));
+
+            // Séparer les labels, les counts de "Incomplete" et de "Complete"
+            const labels = labelsCounts.map(item => item[0]);
+            const incompleteData = labelsCounts.map(item => item[1]);
+            const completeData = labelsCounts.map(item => item[2]);
+
+            return { labels, incompleteData, completeData };
+        }
+
+        async function main() {
+            // Récupérer les paramètres de l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const etude = urlParams.get('etude'); // Récupérer l'étude
+            const centre = urlParams.get('centre'); // Récupérer le centre
+
+            const datesAndStatus = await fetchData(etude, centre);
+            const { labels, incompleteData, completeData } = countByTrimester(datesAndStatus);
+
+            // Générer l'URL du graphique
+            const chartConfig = {
+                type: 'bar',
+                data: {
+                    labels: labels, // Utiliser les labels générés
+                    datasets: [
+                        {
+                            label: 'Incomplete',
+                            data: incompleteData, // Utiliser les données "Incomplete"
+                            backgroundColor: 'rgba(255, 99, 132, 0.8)' // Rouge
+                        },
+                        {
+                            label: 'Complete',
+                            data: completeData, // Utiliser les données "Complete"
+                            backgroundColor: 'rgba(85, 239, 196, 0.8)' // Vert
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Statistiques par trimestre'
+                        }
+                    },
+                    scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+                }
+            };
+
+            // Générer l'URL pour QuickChart
+            const chartUrl = `https://quickchart.io/chart?c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
+            document.getElementById('chart-container').innerHTML = `<img src="${chartUrl}" alt="Graphique des fiches" style="max-width: 100%;">`;
+        }
+
+        main();
+    </script>
+</body>
+</html>

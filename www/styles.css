@@ -1,0 +1,100 @@
+/* www/styles.css */
+body {
+    background-color: #001f3f; /* Bleu marine */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto; /* Centre le header et ajoute de l'espace */
+    padding: 10px;
+    box-sizing: border-box; /* Assure que le padding ne dépasse pas la largeur totale */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.refresh-container {
+    display: flex;
+    align-items: center;
+}
+
+.refresh-btn {
+    background-color: #FF851B; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.refresh-btn:hover {
+    background-color: #FF5733; /* Rouge orangé */
+}
+
+.refresh-date {
+    font-size: 14px;
+    color: #AAAAAA; /* Gris clair */
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* Centre le tableau et ajoute de l'espace */
+    background-color: #0074D9; /* Bleu */
+}
+
+th, td {
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #00509E; /* Bleu foncé */
+}
+
+a {
+    color: #01FF70; /* Vert lime */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.status-icon.valid {
+    color: green;
+    font-size: 20px;
+}
+
+.status-icon.invalid {
+    color: red;
+    font-size: 20px;
+}
+.status-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ccc; /* Couleur par défaut */
+}
+
+.status-icon.valid {
+    background-color: #2ecc71; /* Vert pour valide */
+}
+
+.status-icon.invalid {
+    background-color: #e74c3c; /* Rouge pour invalide */
+}

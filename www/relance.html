@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord des Relances</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sort-btn {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tableau de Bord des Relances</h1>
+    <div class="refresh-container">
+        <span class="refresh-date" id="refresh-date"></span>
+        <button class="refresh-btn" onclick="updateDate()">Actualiser</button>
+    </div>
+</header>
+
+<button class="back-btn" onclick="goBack()">Retour</button>
+
+<div id="etude-info">
+    <!-- Les informations sur l'étude seront insérées ici -->
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Centre</th>
+            <th>
+                Total Patients
+                <button class="sort-btn" onclick="sortTable('Total Patients', 'asc')">&#9650;</button>
+                <button class="sort-btn" onclick="sortTable('Total Patients', 'desc')">&#9660;</button>
+            </th>
+            <th>Total Queries</th>
+            <th>
+                Open Queries
+                <button class="sort-btn" onclick="sortTable('Open Queries', 'asc')">&#9650;</button>
+                <button class="sort-btn" onclick="sortTable('Open Queries', 'desc')">&#9660;</button>
+            </th>
+            <th>Closed Queries</th>
+            <th>Avg Queries/Patient</th>
+            <th>% of Queries in Trial</th>
+            <th>Ratio Fiches Parfaites</th>
+            <th>
+                Ratio Fiches Remplis
+                <button class="sort-btn" onclick="sortTable('ratioFichesrempli', 'asc')">&#9650;</button>
+                <button class="sort-btn" onclick="sortTable('ratioFichesrempli', 'desc')">&#9660;</button>
+            </th>
+            <th>Nombre Complete</th>
+            <th>Nombre Incomplete</th>
+            <th>Nombre Monitored</th>
+            <th>
+                Nombre No Data
+                <button class="sort-btn" onclick="sortTable('nombreNoData', 'asc')">&#9650;</button>
+                <button class="sort-btn" onclick="sortTable('nombreNoData', 'desc')">&#9660;</button>
+            </th>
+            <th>Nombre Warning</th>
+            <th>Nombre Missing</th>
+            <th>Nombre Responded</th>
+            <th>Nombre SS Relance</th>
+            <th>
+                Action
+                <button class="sort-btn" onclick="sortTable('Action', 'asc')">&#9650;</button>
+                <button class="sort-btn" onclick="sortTable('Action', 'desc')">&#9660;</button>
+            </th>
+            <th>Creation de mail -> <button id="trigger-all">Actualiser Tous</button></th>
+        </tr>
+    </thead>
+    <tbody id="centre-data">
+        <!-- Les lignes seront insérées ici par JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    let centreData = [];
+
+    function updateDate() {
+        const now = new Date();
+        const formattedDate = now.toLocaleDateString('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+        document.getElementById('refresh-date').textContent = `Données actualisées le ${formattedDate}`;
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function displayEtudeInfo() {
+        const etude = getQueryParam('etude');
+        const etudeInfoDiv = document.getElementById('etude-info');
+        if (etude) {
+            etudeInfoDiv.innerHTML = `<h2>Informations sur l'Étude: ${etude}</h2>`;
+        } else {
+            etudeInfoDiv.innerHTML = '<h2>Aucune étude sélectionnée</h2>';
+        }
+    }
+
+    function loadCentreData() {
+        const etude = getQueryParam('etude');
+        fetch('./download/' + etude + '/QueryBySite.json')
+            .then(response => response.json())
+            .then(data => {
+                centreData = data;
+                displayCentreData();
+            })
+            .catch(error => console.error('Erreur lors du chargement des données des centres:', error));
+    }
+
+    function displayCentreData() {
+        const tableBody = document.getElementById('centre-data');
+        tableBody.innerHTML = ''; // Efface le contenu existant
+
+        centreData.forEach(centre => {
+            if (parseInt(centre["Total Patients"]) > 0) {
+                const row = document.createElement('tr');
+                const etude = getQueryParam('etude'); // Reprendre l'étude actuelle
+
+                // Création du lien dynamique
+                const actionLink = `<a href="mail.html?etude=${encodeURIComponent(etude)}&centre=${encodeURIComponent(centre.Site)}">Activer Relance</a>`;
+          
+
+                row.innerHTML = `
+                    <td>${centre.Site}</td>
+                    <td>${centre["Total Patients"]}</td>
+                    <td>${centre["Total Queries"]}</td>
+                    <td>${centre["Open Queries"]}</td>
+                    <td>${centre["Closed Queries"]}</td>
+                    <td>${centre["Avg Queries/Patient"]}</td>
+                    <td>${centre["% of Queries in Trial"]}</td>
+                    <td>${centre["ratioFichesParfaites"]}</td>
+                    <td>${centre["ratioFichesrempli"]}</td>
+                    <td>${centre["nombreComplete"]}</td>
+                    <td>${centre["nombreIncomplete"]}</td>
+                    <td>${centre["nombreMonitored"]}</td>
+                    <td>${centre["nombreNoData"]}</td>
+                    <td>${centre["nombreWarning"]}</td>
+                    <td>${centre["nombreMissing"]}</td>
+                    <td>${centre["nombreResponded"]}</td>
+                    <td>${centre["nombreSS_relance"]}</td>
+                    <td>${actionLink}</td>
+                    <td><button class="refresh-btn" data-trial-group="${centre.Site}">Actualiser</button></td>
+                `;
+                tableBody.appendChild(row);
+            }
+        });
+    
+    document.querySelectorAll('.refresh-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const trialGroup = this.getAttribute('data-trial-group');
+                    console.log(trialGroup)
+                    createmail(trialGroup);
+                });
+            });
+            function createmail(trialGroup) {
+                const etude = getQueryParam('etude');
+            fetch(`/create_mail/${etude}/${trialGroup}`, { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.message);
+                })
+                .catch(error => console.error('Erreur lors de l\'actualisation des données:', error));
+        }
+    }
+    function sortTable(column, order) {
+        let isNumeric = !isNaN(centreData[0][column]);
+        centreData.sort((a, b) => {
+            let valueA = isNumeric ? parseFloat(a[column]) : a[column];
+            let valueB = isNumeric ? parseFloat(b[column]) : b[column];
+
+            if (order === 'asc') {
+                return valueA > valueB ? 1 : valueA < valueB ? -1 : 0;
+            } else {
+                return valueA < valueB ? 1 : valueA > valueB ? -1 : 0;
+            }
+        });
+        displayCentreData();
+    }
+
+    // Initialiser la date d'actualisation et afficher les informations de l'étude au chargement de la page
+    updateDate();
+    displayEtudeInfo();
+    loadCentreData();
+</script>
+
+
+
+<script>
+    // Fonction pour déclencher tous les boutons avec la classe "refresh-btn"
+    document.getElementById('trigger-all').addEventListener('click', async function() {
+        const refreshButtons = document.querySelectorAll('.refresh-btn');
+
+        for (let button of refreshButtons) {
+            if (!button.hasAttribute('onclick')) {
+                await simulateClick(button); // Attend la fin de chaque clic avant de passer au suivant
+            }
+        }
+    });
+
+    // Fonction pour simuler le clic, renvoie une promesse
+    function simulateClick(button) {
+        return new Promise(resolve => {
+            button.click();
+            setTimeout(() => { // Simule un délai avant de considérer le clic comme terminé
+                resolve();
+            }, 1000); // Ajustez ce délai selon vos besoins (par ex: temps d'exécution de chaque action)
+        });
+    }
+    // Exemple d'événement sur chaque bouton refresh (pour démonstration)
+    const refreshBtns = document.querySelectorAll('.refresh-btn');
+    refreshBtns.forEach(button => {
+        button.addEventListener('click', function() {
+            alert(`Actualisation du groupe d'essai: ${button.dataset.trialGroup}`);
+        });
+    });
+</script>
+
+</body>
+</html>

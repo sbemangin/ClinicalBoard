@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique des Comptages par Centre</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Graphique des Comptages par Centre</h1>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        async function get_date_test() {
+            try {
+                const response = await fetch('download/better2/QueryByForm.json');
+                if (!response.ok) {
+                    throw new Error('Erreur de réseau');
+                }
+                const data = await response.json();
+
+                // Obtenir la date d'aujourd'hui
+                const today = new Date();
+                const fifteenDaysAgo = new Date();
+                fifteenDaysAgo.setDate(today.getDate() - 15); // Date il y a 15 jours
+
+                // Création d'un objet pour compter les occurrences par centre et date
+                const countsByDateAndSite = {};
+
+                // Initialiser les dates et sites dans l'objet
+                for (let i = 0; i <= 15; i++) {
+                    const date = new Date();
+                    date.setDate(today.getDate() - i);
+                    const formattedDate = convertDate(date.toLocaleDateString('fr-FR')); // Format "YYYY/MM/DD"
+
+                    countsByDateAndSite[formattedDate] = {};
+                }
+
+                // Remplir l'objet avec les comptages
+                data.forEach(item => {
+                    const originalDate = new Date(item["Last Status Update"].split(' ')[0].split('/').reverse().join('-')); // Conversion pour comparaison
+                    if (originalDate >= fifteenDaysAgo) {
+                        const formattedDate = convertDate(item["Last Status Update"]);
+                        const site = item["Site"] || "Inconnu"; // Gérer les cas où le site est manquant
+
+                        // Initialiser le site si ce n'est pas déjà fait
+                        if (!countsByDateAndSite[formattedDate][site]) {
+                            countsByDateAndSite[formattedDate][site] = 0;
+                        }
+                        countsByDateAndSite[formattedDate][site]++;
+                    }
+                });
+
+                // Conversion de l'objet en tableau pour le graphique
+                const resultArray = [];
+                const sites = new Set();
+
+                // Créer des tableaux pour les étiquettes et les données
+                for (const date in countsByDateAndSite) {
+                    const siteCounts = countsByDateAndSite[date];
+                    const counts = {};
+                    for (const site in siteCounts) {
+                        counts[site] = siteCounts[site];
+                        sites.add(site);
+                    }
+                    resultArray.push({ date, counts });
+                }
+
+                // Dessiner le graphique
+                drawChart(resultArray, Array.from(sites));
+
+            } catch (error) {
+                console.error('Erreur lors de la récupération du fichier JSON:', error);
+            }
+        }
+
+        function drawChart(data, sites) {
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            const labels = data.map(item => item.date);
+            const datasets = sites.map(site => {
+                return {
+                    label: site,
+                    data: labels.map(label => data.find(item => item.date === label)?.counts[site] || 0), // Nombre d'entrées par site
+                    backgroundColor: getRandomColor(), // Couleur aléatoire pour chaque site
+                };
+            });
+
+            const myChart = new Chart(ctx, {
+                type: 'bar', // Type de graphique
+                data: {
+                    labels: labels,
+                    datasets: datasets
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            stacked: true // Empiler les barres
+                        },
+                        x: {
+                            stacked: true // Empiler les barres
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right', // Positionner la légende à droite
+                            align: 'start', // Aligner la légende en haut
+                            labels: {
+                                boxWidth: 20, // Largeur de la boîte de couleur
+                                padding: 10 // Espace entre les éléments de la légende
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Fonction pour convertir la date
+        function convertDate(inputDate) {
+            const datePart = inputDate.split(' ')[0]; // "03/10/2024"
+            const [day, month, year] = datePart.split('/'); // ["03", "10", "2024"]
+            return `${year}/${month}/${day}`;
+        }
+
+        // Appel de la fonction après le chargement de la page
+        window.onload = get_date_test;
+    </script>
+</body>
+</html>
